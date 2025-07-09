@@ -1,5 +1,12 @@
 'use client'
-export default function SubmitButton ():React.ReactElement   {
+
+interface ButtonProps{
+  text: string
+}
+
+
+
+export default function SubmitButton ({text}:ButtonProps ):React.ReactElement   {
     
     return(
     <>
