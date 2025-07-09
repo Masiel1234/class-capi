@@ -1,15 +1,18 @@
-import { useRouter } from "next/router";
-import Layout from "./layout";
-export default function Blog(){
-    const router = useRouter();
-    const go = (id:number) => {
-        router.push(`blog/post/${id}`)}
-    return(
-        <Layout>        <div>
-            <button className="bg-amber-950"onClick={()=> go(1)}>pagina 1</button>
-            <button onClick={()=> go(1)}>pagina 2</button>
-        </div>
-        </Layout>
+import Layout from '@/pages/blog/layout'
 
+  
+export default function Blog(){
+    return(
+        <Layout>
+           <main className="p-8">
+        <h1 className="text-3xl font-bold">Bienvenido al Blog</h1>
+        <p className="mt-4 text-gray-600">
+          Explora las últimas categorías y artículos sobre música.
+        </p>
+        <a href="anime"></a>
+      </main>
+
+      
+    </Layout>
     )
 }
