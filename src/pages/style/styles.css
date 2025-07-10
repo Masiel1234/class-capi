@@ -1,0 +1,78 @@
+.login-wrap {
+  width: 100%;
+  margin: 5vw auto 0 auto;
+  max-width: 35vw;
+  position: relative;
+  background: url(https://cdn.cosmos.so/6ca8e002-3287-4a6c-8d9f-b1739a2a2610?format=jpeg) no-repeat center;
+  background-size: cover;
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.login-html {
+  width: 100%;
+  padding: 2vw 6vw 4vw 6vw;
+  text-transform: capitalize;
+}
+.tab-container {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.tab {
+  background: none;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.tab.active {
+  font-weight: bold;
+  color: #525e4d;
+}
+
+.input {
+  width: 100%;
+  padding: 1vw 4vw;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #fff;
+  margin-bottom: 1rem;
+}
+
+.error-message {
+  color: #ff0000;
+  font-size: 12px;
+  margin: 0;
+}
+.login-form .group .check {
+  display: none;
+}
+
+.login-form .group {
+  margin-bottom: 15px;
+}
+
+.login-form .group .label,
+.login-form .group .input {
+  width: 100%;
+  color: #fff;
+  display: block;
+  text-transform: uppercase;
+}
+
+.login-form .group .button {
+  margin: 0 auto;
+  width: 50%;
+  justify-content: center;
+  color: #fff;
+  display: block;
+}
+.login-form .group .label {
+  color: var(--darkGreen);
+  font-size: 12px;
+  text-transform: uppercase;
+}

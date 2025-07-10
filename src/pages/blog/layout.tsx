@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import '@/app/globals.css'
-
+import '@/pages/style/styles.css'
 
 export default function RootLayout({
   children,

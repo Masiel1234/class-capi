@@ -95,21 +95,20 @@ const LoginForm: React.FC = () => {
     };
 
     return (
-        <div className="w-full max-w-[90vw] sm:max-w-[80vw] md:max-w-[60vw] lg:max-w-[40vw] xl:max-w-[35vw] mt-10 mx-auto relative bg-center bg-no-repeat bg-cover shadow-[0_12px_15px_0_rgba(0,0,0,0.24),0_17px_50px_0_rgba(0,0,0,0.19)]">
+        <div className="login-wrap">
             <form onSubmit={handleSubmit}>
-                <div className="w-full px-6 sm:px-8 md:px-12 lg:px-[6vw] pt-6 sm:pt-8 md:pt-10 pb-10 capitalize">
-                    <div className="flex flex-col sm:flex-row mb-6 gap-2 sm:gap-5">
+                <div className="login-html">
+                    <div className="tab-container">
                         <button
                             type="button"
                             onClick={() => setIsLogin(true)}
-                            className={`bg-none border-none text-base sm:text-lg font-bold cursor-pointer p-2 sm:p-[10px] transition-all duration-300 ease-in-out uppercase ${isLogin ? 'active' : ''}`}
-                        >
+                            className={`tab ${isLogin ? 'active' : ''}`}>
                             {('signin')}
                         </button>
                         <button
                             type="button"
                             onClick={() => setIsLogin(false)}
-                            className={`bg-none border-none text-base sm:text-lg font-bold cursor-pointer p-2 sm:p-[10px] transition-all duration-300 ease-in-out uppercase ${!isLogin ? 'active' : ''}`}
+                            className={`tab ${!isLogin ? 'active' : ''}`}
                         >
                             {('signup')}
                         </button>
@@ -164,7 +163,7 @@ const LoginForm: React.FC = () => {
                         </>
                     )}
 
-                    {message && <p className="text-black mt-2">{message}</p>}
+                    {message && <p>{message}</p>}
 
                     <SubmitButton text={isLogin ? ('signin') : ('signup')} />
                 </div>
