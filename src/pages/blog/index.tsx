@@ -1,5 +1,4 @@
 import Layout from '@/pages/blog/layout'
-
   
 export default function Blog(){
     return(
@@ -11,8 +10,6 @@ export default function Blog(){
         </p>
         <a href="anime"></a>
       </main>
-
-      
     </Layout>
     )
 }

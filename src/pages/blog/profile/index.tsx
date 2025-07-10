@@ -1,6 +1,7 @@
 'use client';
 
 import Image from "next/image";
+import Button from '@/components/Button/SubmitButton'
 import { useEffect, useState } from "react";
 import { deleteActiveUser, getActiveUser, type userData } from "@/lib/LocalStorage";
 import { useRouter } from "next/navigation"; 
@@ -26,8 +27,11 @@ const Profile = () => {
     return (
         <>
             <div className="flex items-center gap-4">
+                <Button variant="go" text="" to="/blog" onClick={()=>{}}/>
                 <Image
-                    src={activeUser?.avatarUrl ?? '@/../public/images/pfp.jpg'}
+                width={20}
+                height={20}
+                    src={activeUser?.avatarUrl ?? '/images/pfp.jpg'}
                     alt={activeUser?.username ?? 'usuario'}
                     className="w-10 h-10 rounded-full object-cover"/>
                 <p className="text-sm font-medium capitalize">
@@ -38,6 +42,7 @@ const Profile = () => {
                     className="bg-transparent border-none text-sm font-bold cursor-pointer px-3 py-2 transition-all duration-300 ease-in-out uppercase hover:text-red-600">
                     {"logout"}
                 </button>
+                <Button variant="go" text="go to playlist" to="/blog/playlist" onClick={()=>{}}></Button>
             </div>
         </>
     );

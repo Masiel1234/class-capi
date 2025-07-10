@@ -77,7 +77,7 @@ const LoginForm: React.FC = () => {
                 if (isUserRegistered(userData.username)) {
                     setMessage(('loginSuccess'));
                     updateActiveUser(userData);
-                    router.push("/profile");
+                    router.push("/blog/profile");
                 } else {
                     setMessage(('userNotFound'));
                 }
@@ -88,7 +88,7 @@ const LoginForm: React.FC = () => {
                     addNewUser(userData);
                     setMessage(('successfullRegistration'));
                     setFormData({ username: '', password: '', email: '' });
-                    router.push("/login");
+                    router.push("/blog/login");
                 }
             }
         }
@@ -97,8 +97,14 @@ const LoginForm: React.FC = () => {
     return (
         <div className="login-wrap">
             <form onSubmit={handleSubmit}>
+<<<<<<< HEAD
                 <div className="login-html">
                     <div className="tab-container">
+=======
+                <SubmitButton text='home' variant='go' to='/blog' onClick={()=>{}}/>
+                <div className="w-full px-6 sm:px-8 md:px-12 lg:px-[6vw] pt-6 sm:pt-8 md:pt-10 pb-10 capitalize">
+                    <div className="flex flex-col sm:flex-row mb-6 gap-2 sm:gap-5">
+>>>>>>> 8ec646f03f1095d53cc7a7259de1ea652a1ae964
                         <button
                             type="button"
                             onClick={() => setIsLogin(true)}
@@ -165,7 +171,7 @@ const LoginForm: React.FC = () => {
 
                     {message && <p>{message}</p>}
 
-                    <SubmitButton text={isLogin ? ('signin') : ('signup')} />
+                    <SubmitButton text={isLogin ? ('signin') : ('signup')} variant='button' onClick={() => alert('haz iniciado sesion')}/>
                 </div>
             </form>
         </div>
