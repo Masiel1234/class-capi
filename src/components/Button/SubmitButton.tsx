@@ -7,12 +7,14 @@ interface ButtonProps {
   text: string;
   onClick: () => void;
   variant?: 'button' | 'add' | 'go';
+  to?: string;
 }
 
 const SubmitButton: React.FC<ButtonProps> = ({
   text,
   onClick,
   variant = 'button',
+  to
 }) => {
   const router = useRouter();
 
@@ -26,8 +28,8 @@ const SubmitButton: React.FC<ButtonProps> = ({
 
   if (variant === 'go') {
     return (
-      <button  onClick={() => router.push('/blog/login')} >
-        Login
+      <button className='bg-amber-400 text-white' onClick={() => to && router.push(to)}>
+        {text}
       </button>
     );
   }

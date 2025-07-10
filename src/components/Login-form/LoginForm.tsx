@@ -88,7 +88,7 @@ const LoginForm: React.FC = () => {
                     addNewUser(userData);
                     setMessage(('successfullRegistration'));
                     setFormData({ username: '', password: '', email: '' });
-                    router.push("/login");
+                    router.push("/blog/login");
                 }
             }
         }
@@ -97,6 +97,7 @@ const LoginForm: React.FC = () => {
     return (
         <div className="w-full max-w-[90vw] sm:max-w-[80vw] md:max-w-[60vw] lg:max-w-[40vw] xl:max-w-[35vw] mt-10 mx-auto relative bg-center bg-no-repeat bg-cover shadow-[0_12px_15px_0_rgba(0,0,0,0.24),0_17px_50px_0_rgba(0,0,0,0.19)]">
             <form onSubmit={handleSubmit}>
+                <SubmitButton text='home' variant='go' to='/blog' onClick={()=>{}}/>
                 <div className="w-full px-6 sm:px-8 md:px-12 lg:px-[6vw] pt-6 sm:pt-8 md:pt-10 pb-10 capitalize">
                     <div className="flex flex-col sm:flex-row mb-6 gap-2 sm:gap-5">
                         <button
@@ -166,7 +167,7 @@ const LoginForm: React.FC = () => {
 
                     {message && <p className="text-black mt-2">{message}</p>}
 
-                    <SubmitButton text={isLogin ? ('signin') : ('signup')} variant='add' onClick={() => alert('haz iniciado sesion')}/>
+                    <SubmitButton text={isLogin ? ('signin') : ('signup')} variant='button' onClick={() => alert('haz iniciado sesion')}/>
                 </div>
             </form>
         </div>
