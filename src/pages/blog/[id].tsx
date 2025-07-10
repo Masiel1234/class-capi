@@ -11,7 +11,6 @@ export default function Loquesea(){
             1: '/blog/category/pop',
             2: '/blog/category/rock',
             3: '/blog/category/k-pop',
-            4: '/blog/category/anime',
         };
         const target = diccionario[numerId];
         if(target){
