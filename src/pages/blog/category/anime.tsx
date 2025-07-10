@@ -1,6 +1,6 @@
 import React from 'react';
 import { GetServerSideProps } from 'next';
-
+import Button from '@/components/Button/SubmitButton'
 interface Pregunta {
   category: string;
   type: string;
@@ -48,6 +48,7 @@ const AnimeTrivia: React.FC<Props> = ({ preguntas }) => {
           </li>
         ))}
       </ul>
+      <Button  text='' variant='add'/>
     </div>
   );
 };

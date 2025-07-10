@@ -1,5 +1,6 @@
 import '@/app/globals.css'
 import Layout from '../layout';
+
 export default function KPop() {
     const songs = [
       'Butter – BTS',
@@ -48,8 +49,6 @@ export default function KPop() {
             ))}
           </ul>
         </section>
-  
-
         <section className="mx-auto max-w-6xl">
           <h2 className="mb-4 text-2xl font-semibold text-indigo-700">
             Álbumes esenciales
@@ -72,6 +71,7 @@ export default function KPop() {
                     {album.artist} · {album.year}
                   </p>
                 </div>
+            
               </article>
             ))}
           </div>

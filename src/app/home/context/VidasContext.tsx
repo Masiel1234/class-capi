@@ -10,7 +10,6 @@ const VidasContext = createContext<VidasContextType | undefined>(undefined);
 
 export const VidasProvider = ({ children }: { children: React.ReactNode }) => {
   const [vidas, setVidas] = useState(3);
-
   const perderVida = () => setVidas((prev) => Math.max(prev - 1, 0));
   const reiniciarVidas = () => setVidas(3);
 

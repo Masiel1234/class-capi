@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import '@/app/globals.css'
+import Button from '@/components/Button/SubmitButton'
 
 
 export default function RootLayout({
@@ -23,6 +24,7 @@ export default function RootLayout({
                         <li className="cursor-pointer px-4 py-2 hover:bg-gray-100"><button onClick={()=> router.push('/blog/2')}>rock</button></li>
                         <li className="cursor-pointer px-4 py-2 hover:bg-gray-100"><button onClick={()=> router.push('/blog/3')}>k-pop</button></li>
                         <li className="cursor-pointer px-4 py-2 hover:bg-gray-100"><button onClick={()=> router.push('/blog/4')}>api</button></li>
+                        <li><Button text="" variant="go" onClick={() => router.push('/blog/login')}></Button></li>
                         </ul>
                         </li>
                         </ul>

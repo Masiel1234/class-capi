@@ -77,7 +77,7 @@ const LoginForm: React.FC = () => {
                 if (isUserRegistered(userData.username)) {
                     setMessage(('loginSuccess'));
                     updateActiveUser(userData);
-                    router.push("/profile");
+                    router.push("/blog/profile");
                 } else {
                     setMessage(('userNotFound'));
                 }
@@ -166,7 +166,7 @@ const LoginForm: React.FC = () => {
 
                     {message && <p className="text-black mt-2">{message}</p>}
 
-                    <SubmitButton text={isLogin ? ('signin') : ('signup')} />
+                    <SubmitButton text={isLogin ? ('signin') : ('signup')} variant='add' onClick={() => alert('haz iniciado sesion')}/>
                 </div>
             </form>
         </div>

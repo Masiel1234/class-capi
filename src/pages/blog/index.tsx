@@ -1,5 +1,5 @@
 import Layout from '@/pages/blog/layout'
-
+import Button from '@/components/Button/SubmitButton'
   
 export default function Blog(){
     return(
@@ -10,9 +10,9 @@ export default function Blog(){
           Explora las últimas categorías y artículos sobre música.
         </p>
         <a href="anime"></a>
+        <Button text='' variant='go' onClick={()=>{}}></Button>
+<Button text='prueba' variant='button' onClick={()=>{}}></Button>
       </main>
-
-      
     </Layout>
     )
 }
