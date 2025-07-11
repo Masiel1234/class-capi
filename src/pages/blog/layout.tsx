@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
-import '@/app/globals.css'
-import Button from '@/components/Button/SubmitButton'
-import '@/pages/style/styles.css'
+import '@/app/globals.css';
+import Button from '@/components/Button/SubmitButton';
+import '@/style/styles.css';
 
 export default function RootLayout({
   children,

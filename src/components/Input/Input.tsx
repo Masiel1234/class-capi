@@ -15,19 +15,15 @@ const Input: React.FC<InputFieldProps> = ({ label, type, id, value, onChange, er
 
   return (
     <div className="group">
-      <label
-        htmlFor={id}
-        className="label"
-      >
+      <label htmlFor={id} className="label">
+        {label}
       </label>
-
       <input
         id={id}
         type={type}
         value={value}
         onChange={onChange}
         className="input"/>
-
       {error && (
         <p className="error-messages">{error}</p>
       )}
