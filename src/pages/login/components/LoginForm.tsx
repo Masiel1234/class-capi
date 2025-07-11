@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from 'react';
-import Input from '../../../../common/components/Input/Input';
-import SubmitButton from '../../../../common/components/Button/SubmitButton';
+import Input from '../../../common/components/Input/Input';
+import SubmitButton from '../../../common/components/Button/SubmitButton';
 import { addNewUser, isUserRegistered, updateActiveUser } from '@/lib/LocalStorage';
 import { useRouter } from 'next/navigation';
 
