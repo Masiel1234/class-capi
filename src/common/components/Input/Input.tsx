@@ -14,27 +14,18 @@ interface InputFieldProps {
 const Input: React.FC<InputFieldProps> = ({ label, type, id, value, onChange, error }) => {
 
   return (
-    <div className="mb-4">
-      <label
-        htmlFor={id}
-        className="block text-[#525e4d] text-xs uppercase mb-2 font-semibold tracking-wide"
-      >
+    <div className="group">
+      <label htmlFor={id} className="label">
+        {label}
       </label>
-
       <input
         id={id}
         type={type}
         value={value}
         onChange={onChange}
-        className={`
-          w-full px-[4vw] py-[1vw] rounded-full bg-white/10 border border-white
-          mb-1 text-black placeholder:text-black/70 focus:outline-none
-          focus:ring-2 focus:ring-[#525e4d] transition-all
-        `}
-      />
-
+        className="input"/>
       {error && (
-        <p className="text-red-600 text-xs mt-1">{error}</p>
+        <p className="error-messages">{error}</p>
       )}
     </div>
   );

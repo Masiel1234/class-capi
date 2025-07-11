@@ -1,0 +1,106 @@
+.login-wrap {
+  width: 100%;
+  margin: 5vw auto 0 auto;
+  max-width: 45vw;
+  position: relative;
+  background: url(https://cdn.cosmos.so/83738a61-c23c-43a1-b26e-8b6263697280?format=jpeg) no-repeat center;
+  background-size: cover;
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.login-html {
+  width: 100%;
+  padding: 2vw 6vw 4vw 6vw;
+  text-transform: capitalize;
+}
+
+.tab-container {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.tab {
+  background: none;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.tab.active {
+  font-weight: bold;
+  color: #D4A373;
+}
+
+.input {
+  width: 100%;
+  padding: 1vw 4vw;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #fff;
+  margin-bottom: 1rem;
+}
+
+.error-message {
+  color: #ff0000;
+  font-size: 12px;
+  margin: 0;
+}
+.label{
+  color: #D4A373;
+  display: block;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 2%;
+}
+
+.pfp {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+
+.user-welcome {
+  font-size: 20px;
+  font-weight: bolder;
+  text-transform: capitalize;
+}
+
+.btn-logout {
+  width: 10%;
+  background: #A15C61;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  padding: 5px;
+  text-transform: capitalize;
+}
+.btn-return{
+ background: #A15C61;
+ border: none;
+ width: 20px;
+ height: auto;
+ cursor: pointer;
+}
+.btn-go{
+background: #95A78D;
+border-radius: 20px;
+ border: none;
+ width: 100px;
+ height: 50px;
+ cursor: pointer;
+ box-shadow: inset;
+}

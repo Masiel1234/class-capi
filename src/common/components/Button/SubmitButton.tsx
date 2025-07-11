@@ -3,6 +3,7 @@
 import { useRouter } from 'next/navigation';
 import { GoPlus } from 'react-icons/go';
 import { GoArrowLeft } from 'react-icons/go';
+import '../../../style/styles.css';
 
 interface ButtonProps {
   text: string;
@@ -21,7 +22,7 @@ const SubmitButton: React.FC<ButtonProps> = ({
 if(variant === 'return'){
   return(
 <button onClick={() => history.back()}>
-  <GoArrowLeft className="w-5 h-5" />
+  <GoArrowLeft className="btn-return" />
 </button>
   );
 };
@@ -35,7 +36,7 @@ if(variant === 'return'){
 
   if (variant === 'go') {
     return (
-      <button className='bg-amber-400 text-white' onClick={() => to && router.push(to)}>
+      <button className='btn-go' onClick={() => to && router.push(to)}>
         {text}
       </button>
     );

@@ -1,10 +1,10 @@
 "use client";
-
 import React, { useState } from 'react';
 import Input from '../../../../common/components/Input/Input';
 import SubmitButton from '../../../../common/components/Button/SubmitButton';
 import { addNewUser, isUserRegistered, updateActiveUser } from '@/lib/LocalStorage';
 import { useRouter } from 'next/navigation';
+
 
 interface UserData {
     username: string;
@@ -95,82 +95,90 @@ const LoginForm: React.FC = () => {
     };
 
     return (
-        <div className="w-full max-w-[90vw] sm:max-w-[80vw] md:max-w-[60vw] lg:max-w-[40vw] xl:max-w-[35vw] mt-10 mx-auto relative bg-center bg-no-repeat bg-cover shadow-[0_12px_15px_0_rgba(0,0,0,0.24),0_17px_50px_0_rgba(0,0,0,0.19)]">
+        <>
+         <SubmitButton text="home" variant="go" to="/blog" onClick={() => { }} />
+        <div className="login-wrap">
+           
             <form onSubmit={handleSubmit}>
-                <SubmitButton text='home' variant='go' to='/blog' onClick={()=>{}}/>
-                <div className="w-full px-6 sm:px-8 md:px-12 lg:px-[6vw] pt-6 sm:pt-8 md:pt-10 pb-10 capitalize">
-                    <div className="flex flex-col sm:flex-row mb-6 gap-2 sm:gap-5">
-                        <button
-                            type="button"
-                            onClick={() => setIsLogin(true)}
-                            className={`bg-none border-none text-base sm:text-lg font-bold cursor-pointer p-2 sm:p-[10px] transition-all duration-300 ease-in-out uppercase ${isLogin ? 'active' : ''}`}
-                        >
-                            {('signin')}
-                        </button>
-                        <button
-                            type="button"
-                            onClick={() => setIsLogin(false)}
-                            className={`bg-none border-none text-base sm:text-lg font-bold cursor-pointer p-2 sm:p-[10px] transition-all duration-300 ease-in-out uppercase ${!isLogin ? 'active' : ''}`}
-                        >
-                            {('signup')}
-                        </button>
+                <div className="login-html">
+                    <div className="tab-container">
+                        <div className="">
+                            <div className="">
+                                <button
+                                    type="button"
+                                    onClick={() => setIsLogin(true)}
+                                    className={`tab ${isLogin ? 'active' : ''}`}
+                                >
+                                    {('signin')}
+                                </button>
+                                <button
+                                    type="button"
+                                    onClick={() => setIsLogin(false)}
+                                    className={`tab ${!isLogin ? 'active' : ''}`}
+                                >
+                                    {('signup')}
+                                </button>
+                            </div>
+
+                            {/* Campos */}
+                            {isLogin ? (
+                                <>
+                                    <Input
+                                        label="username"
+                                        type="text"
+                                        id="username"
+                                        value={userData.username}
+                                        onChange={handleChange}
+                                        error={formErrors.username}
+                                    />
+                                    <Input
+                                        label="password"
+                                        type="password"
+                                        id="password"
+                                        value={userData.password}
+                                        onChange={handleChange}
+                                        error={formErrors.password}
+                                    />
+                                </>
+                            ) : (
+                                <>
+                                    <Input
+                                        label="username"
+                                        type="text"
+                                        id="username"
+                                        value={userData.username}
+                                        onChange={handleChange}
+                                        error={formErrors.username}
+                                    />
+                                    <Input
+                                        label="email"
+                                        type="email"
+                                        id="email"
+                                        value={userData.email || ''}
+                                        onChange={handleChange}
+                                        error={formErrors.email}
+                                    />
+                                    <Input
+                                        label="password"
+                                        type="password"
+                                        id="password"
+                                        value={userData.password}
+                                        onChange={handleChange}
+                                        error={formErrors.password}
+                                    />
+                                </>
+                            )}
+                            {message && <p>{message}</p>}
+                            <SubmitButton
+                                text={isLogin ? 'signin' : 'signup'}
+                                variant="button"
+                                onClick={() => alert('haz iniciado sesion')} />
+                        </div>
                     </div>
-
-                    {/* Campos */}
-                    {isLogin ? (
-                        <>
-                            <Input
-                                label="username"
-                                type="text"
-                                id="username"
-                                value={userData.username}
-                                onChange={handleChange}
-                                error={formErrors.username}
-                            />
-                            <Input
-                                label="password"
-                                type="password"
-                                id="password"
-                                value={userData.password}
-                                onChange={handleChange}
-                                error={formErrors.password}
-                            />
-                        </>
-                    ) : (
-                        <>
-                            <Input
-                                label="username"
-                                type="text"
-                                id="username"
-                                value={userData.username}
-                                onChange={handleChange}
-                                error={formErrors.username}
-                            />
-                            <Input
-                                label="email"
-                                type="email"
-                                id="email"
-                                value={userData.email || ''}
-                                onChange={handleChange}
-                                error={formErrors.email}
-                            />
-                            <Input
-                                label="password"
-                                type="password"
-                                id="password"
-                                value={userData.password}
-                                onChange={handleChange}
-                                error={formErrors.password}
-                            />
-                        </>
-                    )}
-
-                    {message && <p className="text-black mt-2">{message}</p>}
-
-                    <SubmitButton text={isLogin ? ('signin') : ('signup')} variant='button' onClick={() => alert('haz iniciado sesion')}/>
                 </div>
             </form>
         </div>
+        </>
 
     );
 };
