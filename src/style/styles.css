@@ -99,8 +99,6 @@
 }
 
 .btn-add {
-  display: flex;
-  align-items: center;
   background: #49fecf;
   border-radius: 20px;
   border: none;
