@@ -71,12 +71,12 @@ export default function KPop() {
                     {album.artist} · {album.year}
                   </p>
                 </div>
-            
               </article>
             ))}
           </div>
         </section>
       </div>
+      
       </Layout>
     );
   }
