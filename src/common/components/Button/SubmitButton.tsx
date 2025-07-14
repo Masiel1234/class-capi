@@ -3,7 +3,7 @@
 import { useRouter } from 'next/navigation';
 import { GoPlus } from 'react-icons/go';
 import { GoArrowLeft } from 'react-icons/go';
-import '../../style/styles.css';
+import '../../../style/styles.css';
 
 interface ButtonProps {
   text: string;

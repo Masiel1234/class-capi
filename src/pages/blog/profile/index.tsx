@@ -1,7 +1,7 @@
 'use client';
 
 import Image from "next/image";
-import Button from '@/components/Button/SubmitButton'
+import Button from '@/common/components/Button/SubmitButton'
 import { useEffect, useState } from "react";
 import { deleteActiveUser, getActiveUser, type userData } from "@/lib/LocalStorage";
 import { useRouter } from "next/navigation"; 
