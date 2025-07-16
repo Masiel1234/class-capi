@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+
+
 .login-wrap {
   width: 100%;
   margin: 5vw auto 0 auto;
@@ -122,6 +126,9 @@ border-radius: 20px;
   border-radius: 8px;
   background-color: #1e1e2f;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  font-family: "inter";
+  display: flex;
+  flex-direction: column;
 }
 
 .form-title {
@@ -135,6 +142,7 @@ border-radius: 20px;
 .form-container {
   display: flex;
   flex-direction: column;
+  gap: 8;
 }
 
 .form-label {
@@ -164,9 +172,24 @@ border-radius: 20px;
   border-radius: 20px;
   border: none;
   width: auto;
+  padding: 14px;
+  font-weight: 500;
+  text-transform: capitalize;
   cursor: pointer;
   box-shadow: inset;
+  display: flex;
+  font-size: 1.2rem;
+  justify-content: center;
+  align-items: center;
 }
+
+
+.icon-plus {
+    width: 40px;
+    height: 40px;
+}
+
+
 
 .btn-go {
   background: #95A78D;

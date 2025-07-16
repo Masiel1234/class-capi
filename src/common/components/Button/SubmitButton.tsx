@@ -3,7 +3,7 @@
 import { useRouter } from 'next/navigation';
 import { GoPlus } from 'react-icons/go';
 import { GoArrowLeft } from 'react-icons/go';
-import '../../../style/styles.css';
+
 
 interface ButtonProps {
   text: string;
@@ -18,35 +18,37 @@ const SubmitButton: React.FC<ButtonProps> = ({
   variant = 'button',
   to
 }) => {
+
   const router = useRouter();
-if(variant === 'return'){
-  return(
-<button onClick={() => history.back()}>
-  <GoArrowLeft className="btn-return" />
-</button>
-  );
-};
-  if (variant === 'add') {
-    return (
-      <button className="btn btn-add" onClick={onClick}>
-        <GoPlus className="icon-arrow" />
-      </button>
-    );
+  let btnELement: React.ReactElement = <></>;
+
+  switch (variant) {
+    case "return":
+      btnELement =
+        <button onClick={() => history.back()}>
+          {text}
+          <GoArrowLeft className="btn-return" />
+        </button>
+      break;
+
+    case "add":
+      btnELement =
+        <button className="btn btn-add" onClick={onClick}>
+          {text}
+          <GoPlus className="icon-plus" />
+        </button>
+      break;
+
+    case "go":
+      btnELement =
+        <button className='btn-go' onClick={() => to && router.push(to)}>
+          {text}
+        </button>
   }
 
-  if (variant === 'go') {
-    return (
-      <button className='btn-go' onClick={() => to && router.push(to)}>
-        {text}
-      </button>
-    );
-  }
 
-  return (
-    <button type="submit" onClick={onClick}>
-      {text}
-    </button>
-  );
+
+  return btnELement;
 };
 
 export default SubmitButton;

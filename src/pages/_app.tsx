@@ -1,12 +1,16 @@
-// pages/_app.tsx
 import type { AppProps } from 'next/app'
-import Head from 'next/head'
 import '@/style/styles.css' 
+import {SongProvider} from '@/context/features/createSongContext'
 
 function MyApp({ Component, pageProps }: AppProps) {
+
+
+
   return (
     <>
-      <Component {...pageProps} />
+    <SongProvider>
+       <Component {...pageProps} />
+    </SongProvider>
     </>
   )
 }
