@@ -11,12 +11,12 @@ export default function ViewStateSong () {
     console.log("STATE OF THE SONG FROM BLOG PAGE: ", song);
 
     return(
-        <div>
-            <h2>New song:</h2>
-            <p>{song.tittle}</p>
-            <p>{song.artist}</p>
-            <p>{song.album}</p>
-            <p>{song.year}</p>
+        <div className="songs-Addeds-Container">
+            <h2 className="titleNewSong">New song:</h2>
+            <p className="song-added-input">{song.tittle}</p>
+            <p className="song-added-input">{song.artist}</p>
+            <p className="song-added-input">{song.album}</p>
+            <p className="song-added-input">{song.year}</p>
         </div>
     );
 } 

@@ -102,14 +102,14 @@
   cursor: pointer;
 }
 
-.btn-go{
-background: #95A78D;
-border-radius: 20px;
- border: none;
- width: 100px;
- height: 50px;
- cursor: pointer;
- box-shadow: inset;
+.btn-go {
+  background: #95A78D;
+  border-radius: 20px;
+  border: none;
+  width: 100px;
+  height: 50px;
+  cursor: pointer;
+  box-shadow: inset;
 }
 
 
@@ -185,8 +185,8 @@ border-radius: 20px;
 
 
 .icon-plus {
-    width: 40px;
-    height: 40px;
+  width: 40px;
+  height: 40px;
 }
 
 
@@ -214,6 +214,41 @@ border-radius: 20px;
   overflow: hidden;
   transition: 0.3s ease;
 }
+
 .board:hover {
-      transform: translateY(-5px);
+  transform: translateY(-5px);
 }
+
+.songs-Addeds-Container {
+  border-radius: 12px;
+  max-width: max-content;
+  padding: 16px;
+  background-color: #ffffff;
+  background-image: 
+    repeating-radial-gradient(circle at 0 0, transparent 0, #ffffff 40px),
+    repeating-linear-gradient(180deg, #e8e6e055 0px, #e8e6e0 1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.songs-Addeds-Container:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.titleNewSong {
+  max-width: max-content;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.song-added-input {
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 300px;
+  font-size: 1rem;
+}
+
